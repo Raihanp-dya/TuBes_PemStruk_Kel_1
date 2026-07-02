@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get.yours - Marketplace Album Fisik</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGASI UTAMA  -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo toko -->
+      <a href="#" class="logo">ᯓ♪ Get.yours</a>
+      <!-- Kotak pencarian -->
+      <div class="search-box">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" placeholder="Cari album..." id="searchInput" />
+      </div>
+      <!-- Tombol dark mode di dalam navbar -->
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle">
+          <i data-lucide="moon" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FILTER KATEGORI  -->
+  <section class="category-bar">
+    <div class="category-container">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="rock">Rock</button>
+      <button class="category-btn" data-category="bossanova">BossaNova</button>
+      <button class="category-btn" data-category="pop">Pop</button>
+      <button class="category-btn" data-category="hip-hop">Hip-Hop</button>
+      <button class="category-btn" data-category="jazz">Jazz</button>
+      <button class="category-btn" data-category="lofi">Lofi</button>
+      <button class="category-btn" data-category="lainnya">Lainnya</button>
+    </div>
+  </section>
+
+  <!-- GRID PRODUK  -->
+  <main class="products-container" id="productsContainer">
+  </main>
+
+  <!--  TOMBOL KERANJANG  -->
+  <div class="fab-container">
+    <button class="fab-btn" id="cartToggle">
+      <i data-lucide="shopping-cart" size="30"></i>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <!-- Dropdown keranjang -->
+    <div class="cart-dropdown" id="cartDropdown">
+      <div class="cart-dropdown-header">
+        <span>Keranjang</span>
+        <button class="icon-btn" id="closeCartDropdown"><i data-lucide="x"></i></button>
+      </div>
+      <div class="cart-dropdown-items" id="cartItems">
+        <p class="empty-cart">Keranjang kosong</p>
+      </div>
+      <div class="cart-dropdown-footer" id="cartFooter" style="display: none;">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">Rp 0</span>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFIKASI  -->
+  <div class="toast" id="toast">Ditambahkan ke keranjang</div>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
